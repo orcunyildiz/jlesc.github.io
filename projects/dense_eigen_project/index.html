@@ -58,8 +58,8 @@
   <div class="dropdown-menu">
     <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
     <a href="/projects/" class="dropdown-item active">Projects</a>
-    <a href="/software/" class="dropdown-item">Software</a>
-    <a href="/research/visits/" class="dropdown-item">Visits</a>
+    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
+    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
   </div>
 </li>
 
@@ -169,7 +169,9 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
-<li class="toc-entry toc-h3"><a href="#software-update-and-descriptions">Software update and descriptions:</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
+<li class="toc-entry toc-h2"><a href="#software-update-and-descriptions">Software update and descriptions:</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -307,15 +309,52 @@ We confirmed the libraries are ported and perform on the systems;
   </li>
 </ol>
 
-<h3 id="software-update-and-descriptions">
-<a id="software-update-and-descriptions" class="anchor" href="#software-update-and-descriptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Software update and descriptions:</h3>
+<h2 id="results-for-20192020">
+<a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
+
+<ol>
+  <li>(Cont.) Distributed MPI/OpenMP Parallel
+    <ul>
+      <li>Progress will be delivered upto the machine replacement status.</li>
+    </ul>
+  </li>
+  <li>(Cont.) GPU extensions (standalone/cluster)
+    <ul>
+      <li>We have investigated the performance trend on three GPU-eigensolvers, cuSolver 10.0, MAGMA 2.5.0, and EigenG 2.2d.</li>
+      <li>On a Volta V100 board with CUDA 10.0+intel MKL library yieded excellent performance.</li>
+      <li>MAGMA (1stege kernel) and EigenG shows totally 700GFLOPS for a full diagonalization operation when N=9700.</li>
+      <li>For larger benchmark, when N=30000 and we used EigenG, the elapsed time for the full diagonalization took approximatedly 100 seconds, and it reached more than one TFLOPS.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="results-for-20202021">
+<a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
+
+<p>Basically, the activity in FY2020 was limited due to the Covid19 pandemic circumstance. However, some of our updates can be summarize as follow.</p>
+
+<ol>
+  <li>(Cont.) Distributed MPI/OpenMP Parallel
+    <ul>
+      <li>Implementation of the D&amp;C routine on Fugaku in trial usage in 2020 and early evaluation from the official launch in March 2021.</li>
+      <li>Progress and preliminary results will be reported at the next JLESC meeting in 2021.</li>
+    </ul>
+  </li>
+  <li>(Cont.) GPU extensions (standalone/cluster)
+    <ul>
+      <li>Good acceleration both on JUWELS and JURECA all parts of the computation</li>
+      <li>ELPA1 is accelerated very high; however, ELPA2 only shows reasonable acceleration only at a few % of eigenvectors are computed rather than the pure CPU version.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="software-update-and-descriptions">
+<a id="software-update-and-descriptions" class="anchor" href="#software-update-and-descriptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Software update and descriptions:</h2>
 
 <ul>
-  <li>EigenExa : 2.4p1</li>
-  <li>ELPA : 2017.11.001
-     includes support for KNL and GPU, new user interface</li>
-  <li>Elemental: 0.87.7
-         allows to compute arbitrary part of the eigenspectrum</li>
+  <li>EigenExa : 2.4d and 2.6</li>
+  <li>ELPA : 2018.11.001, 2019.05.001 for devel stage, and 2019.11.001 for next stage.
+     include support for GPU acceleration for ELPA1 and 2.</li>
 </ul>
 
 <h2 id="visits-and-meetings">
@@ -326,15 +365,13 @@ We confirmed the libraries are ported and perform on the systems;
 <p>Frequent e-mail exchanges between Toshiyuki Imamura and Inge Gutheil.
 In the 5th JLESC meeting at Lyon,  both met and discussed about this project.
 Also, 6th JLESC meeting was hosted by AICS and Inge Gutheil visited AICS.
-Toshiyuki Imamura visited the 7th JLESC workshop in UIUC Urbana and
-will visit the 8th JLESC workshop in Barcelona. He visited Juelich after ISC
-to talk about KNL usage.
-Organized a minisymposium titled ‘Performance benchmark of standard eigensolver on KNL systems’, at the PMAA2018 conference, Zurich.</p>
+Toshiyuki Imamura visited the 7th JLESC workshop in UIUC Urbana and the 8th JLESC workshop in Barcelona.
+He also visited Juelich on 23th of June after ISC17 to talk about KNL usage.
+Organized a minisymposium titled ‘Performance benchmark of standard eigensolver on KNL systems’, at the PMAA2018 conference, 27-29th of June 2019, Zurich, with two presentations from Imamura (“Communication-Avoiding approaches of dense Eigenvalue / SVD problems”) and Gutheil (“Performance benchmark of standard eigensolver on KNL systems”).
+Toshiyuki Imamura visited JSC on 24-25th of January 2019 to talk about eigensolvers on GPU environment and so on.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
-
-<p>We have no publication yet.</p>
 
 <!--
 
@@ -360,10 +397,10 @@ For each half, we plan to do as follow.
 
  *Performance benchmark of standard eigensolver on KNL systems -->
 
-<p>Apply to the computational resource such as 
+<p>Apply to the computational resource such as
 “Large-scale HPC Challenge” Project, Joint Center for Advanced High Performance Computing (JCAHPC).</p>
 
-<p>Benchmarking on GPU accelration systems.</p>
+<p>Benchmarking on GPU acceleration systems.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>

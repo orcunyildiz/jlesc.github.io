@@ -58,8 +58,8 @@
   <div class="dropdown-menu">
     <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
     <a href="/projects/" class="dropdown-item active">Projects</a>
-    <a href="/software/" class="dropdown-item">Software</a>
-    <a href="/research/visits/" class="dropdown-item">Visits</a>
+    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
+    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
   </div>
 </li>
 
@@ -145,11 +145,15 @@
           
           
             <span class="clearfix">
-              <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">George</span> <span class="person sur-name">Bosilca</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+              <span class="person given-name">Bouteiller</span> <span class="person sur-name">Aurelien</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
             </span>
           
             <span class="clearfix">
@@ -157,7 +161,23 @@
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Herault</span> <span class="person sur-name">Thomas</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+              <span class="person given-name">Li</span> <span class="person sur-name">Han</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Thomas</span> <span class="person sur-name">Herault</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Valentin</span> <span class="person sur-name">Le Fèvre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Frederic</span> <span class="person sur-name">Vivien</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
         </div>
@@ -181,6 +201,9 @@
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -194,22 +217,22 @@
 <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
-<p>In this project, we aim at finding efficient fault-tolerant scheduling schemes 
-for workflow applications that can be expressed as a directed acyclic graph (DAG) 
+<p>In this project, we aim at finding efficient fault-tolerant scheduling schemes
+for workflow applications that can be expressed as a directed acyclic graph (DAG)
 of tasks.</p>
 
-<p>Checkpointing-recovery is the traditional fault-tolerance technique when it comes 
-to resilience for large-scale platforms. Unfortunately, as platform scale increases, 
-checkpoints must become more frequent to accommodate with the increasing 
-Mean Time Between Failure (MTBF). As such, it is expected that checkpoint-recovery 
+<p>Checkpointing-recovery is the traditional fault-tolerance technique when it comes
+to resilience for large-scale platforms. Unfortunately, as platform scale increases,
+checkpoints must become more frequent to accommodate with the increasing
+Mean Time Between Failure (MTBF). As such, it is expected that checkpoint-recovery
 will become a major bottleneck for applications running on post-petascale platforms.</p>
 
-<p>We first focus on replication as a way of mitigating the checkpointing-recovery 
-overhead. A task can be checkpointed and/or replicated, so that if a single replica 
-fails, no recovery is needed. Our goal is to decide which task to checkpoint, 
-which task to replicate, and how much resource should be allocated to each task 
-for the execution of general workflow applications. For that, we first need to 
-derive a clear model for replication, as there are many ways to implement it, 
+<p>We first focus on replication as a way of mitigating the checkpointing-recovery
+overhead. A task can be checkpointed and/or replicated, so that if a single replica
+fails, no recovery is needed. Our goal is to decide which task to checkpoint,
+which task to replicate, and how much resource should be allocated to each task
+for the execution of general workflow applications. For that, we first need to
+derive a clear model for replication, as there are many ways to implement it,
 even for a single task.</p>
 
 <h2 id="results-for-20162017">
@@ -231,27 +254,402 @@ even for a single task.</p>
 <p>While the previous work had focused on applications for which we can decide at which frequency we can checkpoint, and our aim has been to find the optimal checkpointing period, we have also initiated the study for linear chains of parallel tasks. The aim is then to decide which tasks to checkpoint and/or replicate. In this case, we have
 provided an optimal dynamic programming algorithm, and an extensive set of simulations to assess (i) in which scenarios checkpointing performs better than replication, or vice-versa; and (ii) in which scenarios the combination of both methods is useful, and to what extent.</p>
 
+<h2 id="results-for-20182019">
+<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+
+<p>In high-performance computing environments, input/output (I/O) from various
+sources often contend for scarce available bandwidth. Adding to the I/O
+operations inherent to the failure-free execution of an application, I/O
+from checkpoint/restart (CR) operations (used to ensure progress in the presence
+of failures) place an additional burden as it increase I/O contention,
+leading to degraded performance.  We have  considered a cooperative scheduling policy that optimizes the
+overall performance of concurrently executing CR-based applications which share
+valuable I/O resources.  First, we provide a theoretical model and then derive a set
+of necessary constraints needed to minimize the global waste on the
+platform.
+  Our results demonstrate that the optimal checkpoint interval, as defined by
+Young/Daly, despite providing a sensible metric for a single application, is not
+sufficient to optimally address resource contention at the platform scale.  We
+therefore show that combining optimal checkpointing periods with I/O scheduling
+strategies can provide a significant improvement on the overall application
+performance, thereby maximizing platform throughput.
+Overall, these results provide critical analysis and direct guidance on checkpointing
+large-scale workloads in the presence of competing I/O while minimizing the impact
+on application performance. This work has received the best paper award at APDCM 2018,
+a workshop run in conjunction with IPDPS 2018.</p>
+
+<p>Three JLESC partners, Inria, Riken and UTK,  have conducted a study to compare
+the performance of different approaches to
+  tolerate failures using checkpoint/restart when executed on
+  large-scale failure-prone platforms. We study (i) rigid
+  applications, which use a constant number of processors throughout
+  execution; (ii) moldable applications, which can use a different
+  number of processors after each restart following a fail-stop error;
+  and (iii) rid applications, which are moldable applications
+  restricted to use rectangular processor grids (such as many dense
+  linear algebra kernels). For each application type, we compute the
+  optimal number of failures to tolerate before relinquishing the
+  current allocation and waiting until a new resource can be
+  allocated, and we determine the optimal yield that can be
+  achieved. We instantiate our performance model with a realistic
+  applicative scenario and make it publicly available for further
+  usage.</p>
+
+<p>Also, the Inria partner has studied checkpointing strategies for workflows and has shown
+how to design an efficient strategy that achieves an efficient trade-off between extreme approaches where either  all application data is checkpointed, or no application data is
+  checkpointed.
+  Results demonstrate that our algorithm outperforms both the former approach,
+  because of lower checkpointing overhead, and the latter approach, because of better resilience to failures <a href="#HanEtAl2018">(Han et al. 2018)</a>,
+<a href="#HanEtAl2018b">(Han et al. 2018)</a>.</p>
+
+<h2 id="results-for-20192020">
+<a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
+
+<p>We have revisited replication coupled with checkpointing for fail-stop errors. This work focuses on divisible-load applications rather than workflows. In this context, replication enables the application to survive many fail-stop errors, thereby allowing for longer checkpointing periods. Previously published works use replication with the NORESTART strategy, which works as follows: (i) compute the application Mean
+  Time To Interruption (MTTI) as a function of the number of processor pairs and the individual processor Mean Time Between Failures (MTBF); (ii) use
+ checkpointing period  P à la Young/Daly, replacing the MTBF by the MTTI;
+  and (iii) never restart failed processors until the application crashes.
+We introduce the RESTART strategy where failed processors are restarted after each checkpoint.
+We compute
+ the optimal checkpointing period Q for this strategy, which is much larger than P thereby
+ decreasing I/O pressure.
+We show through simulations that using Q and the RESTART strategy, instead of P  and the usual NORESTART strategy, significantly decreases the overhead
+induced by replication,
+in terms of both total execution time and energy consumption.
+This work has appeared in the proceedings of SC’2019.</p>
+
+<h2 id="results-for-20202021">
+<a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
+
+<p>We have first focused on the resilient scheduling of parallel jobs on high performance computing (HPC) platforms to minimize the overall completion time, or makespan. We have revisited the problem by assuming that jobs are subject to transient or silent errors, and hence may need to be re-executed each time they fail to complete successfully. This work generalizes the classical framework where jobs are known offline and do not fail: in this classical framework, list scheduling that gives priority to longest jobs is known to be a 3-approximation when imposing to use shelves, and a 2-approximation without this restriction. We show that when jobs can fail, using shelves can be arbitrarily bad, but unrestricted list scheduling remains a 2-approximation. We have designed several heuristics, some list-based and some shelf-based, along with different priority rules and backfilling options. We have assessed and compared their performance through an extensive set of simulations, using both synthetic jobs and log traces from the Mira supercomputer. This work has appeared at APDCM’2020, and an extended version appeared in IJNC.</p>
+
+<p>We have then focused the resilient scheduling of moldable parallel jobs on high-performance 
+computing (HPC) platforms. Moldable jobs allow for choosing a processor allocation before execution, 
+and their execution time obeys various speedup models. The objective is to minimize 
+the overall completion time of the jobs, or the makespan, when jobs can fail due to silent errors 
+and hence may need to be re-executed after each failure until successful completion. 
+Again, this work generalizes the classical scheduling framework for failure-free jobs. To cope with silent errors, 
+we introduce two resilient scheduling algorithms, LPA-List and Batch-List, both of which use the List strategy 
+to schedule the jobs. Without knowing a priori how many times each job will fail, LPA-List relies 
+on a local strategy to allocate processors to the jobs, while Batch-List schedules the jobs in batches 
+and allows only a restricted number of failures per job in each batch. We prove new approximation ratios 
+for the two algorithms under several prominent speedup models (e.g., roofline, communication, 
+Amdahl, power, monotonic, and a mixed model). An extensive set of simulations is conducted 
+to evaluate different variants of the two algorithms, and the results show that they consistently 
+outperform some baseline heuristics. Overall, our best algorithm is within a factor of 1.6 of 
+a lower bound on average over the entire set of experiments, and within a factor of 4.2 in the worst case. Preliminary results with a subset of speedup models have been published in 
+Cluster’2020.</p>
+
+<p>In parallel, we have also been working on the comparison of several fault-tolerance methods 
+for the detection and correction of floating-point errors in matrix-matrix multiplication.<br>
+These methods include replication,
+triplication, Algorithm-Based Fault Tolerance (ABFT) and residual checking
+(RC).  Error correction for ABFT can be achieved either by recovering the 
+corrupted entries from the correct data and the checksums by
+solving a small-size
+linear system of equations, or by recomputing corrupted coefficients. We show
+that both approaches can be used for RC. We provide a synthetic presentation of
+all methods before discussing their pros and cons.  We have implemented all
+these methods with calls to optimized BLAS routines, and we provide performance
+data for a wide range of failure rates and matrix sizes. In addition, with
+respect to the literature, we have  considered relatively high error rates.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
 <p><span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) in Chicago for three months (March, April, and May 2016) to initiate the project. Furthermore, we have been meeting regularly in the previous years. In particular,
 we have been attending the SC conference (November 2016
-and November 2017), where we had extensive discussions to make progress. 
+and November 2017), where we had extensive discussions to make progress.
 We represented the JLESC at the Inria booth during these conferences.</p>
 
-<p>While not meeting in person, we have stayed in close collaboration through regular Skype meetings,
+<p>When not meeting in person, we have stayed in close collaboration through regular Skype meetings,
 which allowed us to make progress on the project.</p>
+
+<p><span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months, and a total of two months and a half for 2019/2020.</p>
+
+<p><span class="person given-name">Valentin</span> <span class="person sur-name">Le Fèvre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) has visited  Univ. Tenn. Knoxville for 10 days in February 2019,
+and for 10 days in January 2020.</p>
+
+<p>Due to the Covid-19 sanitary situation, we have not had any visits since February 2020, 
+but we had numerous virtual interactions.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
-<p>Two papers have been accepted to FTXS’17 <a href="#benoitEtAl2017identifying">(Benoit et al. 2017)</a>,<a href="#benoitEtAl2017optimal">(Benoit et al. 2017)</a>.</p>
+<p>Two papers have been published in FTXS’17 <a href="#benoitEtAl2017identifying">(Benoit et al. 2017)</a>,<a href="#benoitEtAl2017optimal">(Benoit et al. 2017)</a>.</p>
 
-<p>The most recent work combining fail-stop and silent errors has been submitted to JPDC (“Coping with silent and fail-stop errors at scale by combining replication and checkpointing”).</p>
+<p>The work combining fail-stop and silent errors has been published in JPDC
+<a href="#BenoitEtAl2018">(Benoit et al. 2018)</a>.</p>
 
-<p>The initial work on linear chain of tasks will be submitted to APDCM’18 (“Combining Checkpointing and Replication for Linear Workflows”).</p>
+<p>A work on executing workflows on high-bandwidth memory architectures was published in ICPP’18 <a href="#BenoitEtAl2018b">(Benoit et al. 2018)</a>.</p>
+
+<p>The work on optimal cooperative checkpointing for shared high-performance computing platforms was the best paper at APDCM’18 <a href="#HeraultEtAl2018">(Hérault et al. 2018)</a>.</p>
+
+<p>The work studying whether moldable applications perform better
+on failure-prone HPC platforms was published in Resilience’18 <a href="#LeFevreEtAl2018">(Fèvre et al. 2018)</a>.</p>
+
+<p>The work on replication with checkpointing was published at SC’19 <a href="#BenoitEtAl2019">(Benoit et al. 2019)</a>.</p>
+
+<p>The work on the comparison of several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication was published at Resilience’20 <a href="#LeFevreEtAl2020">(Fèvre et al. 2020)</a>.</p>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          LeFevreEtAl2020
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLeFevreEtAl2020Bibtex" aria-expanded="false" aria-controls="collapseLeFevreEtAl2020Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLeFevreEtAl2020Abstract" aria-expanded="false" aria-controls="collapseLeFevreEtAl2020Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="LeFevreEtAl2020">Fèvre, Valentin Le, Thomas Herault, Julien Langou, and Yves Robert. 2020. “A Comparison of Several Fault-Tolerance Methods for the Detection and Correction of Floating-Point Errors
+in Matrix-Matrix Multiplication.” In <i>Resilience: 13th Workshop on Resiliency in High Performance Computing
+  in Clusters, Clouds, and Grids,
+                Jointly Published with Euro-Par 2020</i>. LNCS. Springer Verlag.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLeFevreEtAl2020Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{LeFevreEtAl2020,
+  author = {Fèvre, Valentin Le and Herault, Thomas and Langou, Julien and Robert, Yves},
+  booktitle = {{Resilience}: 13th Workshop on Resiliency in High Performance Computing
+    in Clusters, Clouds, and Grids,
+                  jointly published with {Euro-Par 2020}},
+  title = {A comparison of several fault-tolerance methods for the detection and correction of floating-point errors
+  in matrix-matrix multiplication},
+  year = {2020},
+  series = {LNCS},
+  publisher = {Springer Verlag}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BenoitEtAl2019
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBenoitEtAl2019Bibtex" aria-expanded="false" aria-controls="collapseBenoitEtAl2019Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBenoitEtAl2019Abstract" aria-expanded="false" aria-controls="collapseBenoitEtAl2019Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BenoitEtAl2019">Benoit, Anne, Thomas Hérault, Valentin Le Fèvre, and Yves Robert. 2019. “Replication Is More Efficient than You Think.” In <i>SC’2019, the IEEE/ACM Conference on High Performance Computing Networking, Storage and Analysis</i>. ACM Press.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBenoitEtAl2019Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{BenoitEtAl2019,
+  author = {Benoit, Anne and Hérault, Thomas and Fèvre, Valentin Le and Robert, Yves},
+  booktitle = {{SC'2019}, the IEEE/ACM Conference on High Performance Computing Networking, Storage and Analysis},
+  title = {Replication is more efficient than you think},
+  publisher = {ACM Press},
+  year = {2019}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          LeFevreEtAl2018
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLeFevreEtAl2018Bibtex" aria-expanded="false" aria-controls="collapseLeFevreEtAl2018Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLeFevreEtAl2018Abstract" aria-expanded="false" aria-controls="collapseLeFevreEtAl2018Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="LeFevreEtAl2018">Fèvre, Valentin Le, George Bosilca, Aurelien Bouteiller, Thomas Herault, Atsushi Hori, Yves Robert, and Jack Dongarra. 2018. “Do Moldable Applications Perform Better
+on Failure-Prone HPC Platforms?” In <i>Resilience: 11th Workshop on Resiliency in High Performance Computing
+  in Clusters, Clouds, and Grids,
+                Jointly Published with Euro-Par 2018</i>. LNCS. Springer Verlag.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLeFevreEtAl2018Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{LeFevreEtAl2018,
+  author = {Fèvre, Valentin Le and Bosilca, George and Bouteiller, Aurelien and Herault, Thomas and Hori, Atsushi and Robert, Yves and Dongarra, Jack},
+  booktitle = {{Resilience}: 11th Workshop on Resiliency in High Performance Computing
+    in Clusters, Clouds, and Grids,
+                  jointly published with {Euro-Par 2018}},
+  title = {{Do moldable applications perform better
+  on failure-prone HPC platforms?}},
+  year = {2018},
+  series = {LNCS},
+  publisher = {Springer Verlag}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HeraultEtAl2018
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHeraultEtAl2018Bibtex" aria-expanded="false" aria-controls="collapseHeraultEtAl2018Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseHeraultEtAl2018Abstract" aria-expanded="false" aria-controls="collapseHeraultEtAl2018Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="HeraultEtAl2018">Hérault, Thomas, Yves Robert, Aurélien Bouteiller, Dorian Arnold, Kurt B. Ferreira, George Bosilca, and Jack Dongarra. 2018. “Optimal Cooperative Checkpointing for Shared High-Performance Computing Platforms.” In <i>20th Workshop on Advances in Parallel and Distributed
+                              Computational Models APDCM 2018</i>. IEEE Computer Society Press.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHeraultEtAl2018Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{HeraultEtAl2018,
+  author = {Hérault, Thomas and Robert, Yves and Bouteiller, Aurélien and Arnold, Dorian and Ferreira, Kurt B. and Bosilca, George and Dongarra, Jack},
+  booktitle = {20th Workshop on Advances in Parallel and Distributed
+                                Computational Models {APDCM 2018}},
+  publisher = {IEEE Computer Society Press},
+  title = {Optimal cooperative checkpointing for shared high-performance computing platforms},
+  year = {2018}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BenoitEtAl2018b
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBenoitEtAl2018bBibtex" aria-expanded="false" aria-controls="collapseBenoitEtAl2018bBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBenoitEtAl2018bAbstract" aria-expanded="false" aria-controls="collapseBenoitEtAl2018bAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BenoitEtAl2018b">Benoit, Anne, Swann Perarnau, Loïc Pottier, and Yves Robert. 2018. “A Performance Model to Execute Workflows on High-Bandwidth Memory Architectures.” In <i>ICPP’2018, the 47th Int. Conf. on Parallel Processing</i>. IEEE Computer Society Press.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBenoitEtAl2018bBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{BenoitEtAl2018b,
+  author = {Benoit, Anne and Perarnau, Swann and Pottier, Loïc and Robert, Yves},
+  booktitle = {{ICPP'2018}, the 47th Int. Conf. on Parallel Processing},
+  title = {A performance model to execute workflows on high-bandwidth memory architectures},
+  publisher = {{IEEE} Computer Society Press},
+  year = {2018}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BenoitEtAl2018
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBenoitEtAl2018Bibtex" aria-expanded="false" aria-controls="collapseBenoitEtAl2018Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBenoitEtAl2018Abstract" aria-expanded="false" aria-controls="collapseBenoitEtAl2018Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BenoitEtAl2018">Benoit, Anne, Aurélien Cavelan, Franck Cappello, Padma Raghavan, Yves Robert, and Hongyang Sun. 2018. “Coping with Silent and Fail-Stop Errors at Scale by Combining Replication and Checkpointing.” <i>J. Parallel and Distributed Computing</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBenoitEtAl2018Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{BenoitEtAl2018,
+  author = {Benoit, Anne and Cavelan, Aurélien and Cappello, Franck and Raghavan, Padma and Robert, Yves and Sun, Hongyang},
+  journal = {J. Parallel and Distributed Computing},
+  title = {Coping with silent and fail-stop errors at scale by combining replication and checkpointing},
+  year = {2018},
+  badvolume = {98},
+  badpages = {8-24}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
@@ -272,7 +670,7 @@ which allowed us to make progress on the project.</p>
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="benoitEtAl2017identifying">Benoit, Anne, Aurélien Cavelan, Franck Cappello, Padma Raghavan, Yves Robert, and Hongyang Sun. 2017. “Identifying the Right Replication Level to Detect and Correct Silent Errors at Scale.” In <i>Proceedings of the 7th Workshop on Fault Tolerance for HPC at EXtreme Scale (FTXS)</i>.</span>
+      <span id="benoitEtAl2017identifying">———. 2017. “Identifying the Right Replication Level to Detect and Correct Silent Errors at Scale.” In <i>Proceedings of the 7th Workshop on Fault Tolerance for HPC at EXtreme Scale (FTXS)</i>.</span>
     </div>
   </div>
   <div class="collapse" id="collapsebenoitEtAl2017identifyingBibtex">
@@ -337,16 +735,12 @@ which allowed us to make progress on the project.</p>
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>There remains a lot to explore for workflow applications, consisting of tasks. 
+<p>There remains a lot to explore for workflow applications, consisting of tasks.
 We have so far focused only on duplication in this case, but
-one may want to consider different replication levels (duplication, triplication or more) to different tasks, depending upon their criticality in terms of longest paths, number of successors, etc. 
+one may want to consider different replication levels (duplication, triplication or more) to different tasks, depending upon their criticality in terms of longest paths, number of successors, etc.
 This may be even more important when considering a general directed acyclic graph of tasks,
 rather than restricting to linear chains of tasks. This topic is called partial replication,
 and even though it has been empirically studied by some previous work, designing an optimal strategy that combines partial redundancy and checkpointing and analyzing its efficacy remain to be done.</p>
-
-<p>Also, we have not yet explored how replication may help correct silent data corruptions in 
-workflow applications, since our initial study considers only fail-stop errors. Combining
-both types of errors for workflow applications is a challenging perspective to our work.</p>
 
 <p>Finally, our initial goal was to target pipelined workflow applications, where data continuously
 enters the workflow, and where the objective is to maximize the throughput that can be achieved.
@@ -362,32 +756,34 @@ This causes several new challenges that we hope to address in the future.</p>
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
-          benoitEtAl2017identifying
+          HanEtAl2018b
         </div>
       </div>
       <div class="row">
-        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsebenoitEtAl2017identifyingBibtex" aria-expanded="false" aria-controls="collapsebenoitEtAl2017identifyingBibtex">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHanEtAl2018bBibtex" aria-expanded="false" aria-controls="collapseHanEtAl2018bBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsebenoitEtAl2017identifyingAbstract" aria-expanded="false" aria-controls="collapsebenoitEtAl2017identifyingAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseHanEtAl2018bAbstract" aria-expanded="false" aria-controls="collapseHanEtAl2018bAbstract">
           Abstract
         </button>
       </div>
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="benoitEtAl2017identifying">Benoit, Anne, Aurélien Cavelan, Franck Cappello, Padma Raghavan, Yves Robert, and Hongyang Sun. 2017. “Identifying the Right Replication Level to Detect and Correct Silent Errors at Scale.” In <i>Proceedings of the 7th Workshop on Fault Tolerance for HPC at EXtreme Scale (FTXS)</i>.</span>
+      <span id="HanEtAl2018b">Han, Li, Louis-Claude Canon, Henri Casanova, Yves Robert, and Frédéric Vivien. 2018. “Checkpointing Workflows for Fail-Stop Errors.” <i>IEEE Trans. Computers</i> 67 (8): 1105–20.</span>
     </div>
   </div>
-  <div class="collapse" id="collapsebenoitEtAl2017identifyingBibtex">
+  <div class="collapse" id="collapseHanEtAl2018bBibtex">
     <div class="row bibtex-ref-raw">
       <div class="col-sm-10 offset-sm-1">
-        <pre><code>@inproceedings{benoitEtAl2017identifying,
-  title = {Identifying the right replication level to detect and correct silent errors at scale},
-  author = {Benoit, Anne and Cavelan, Aur{\'e}lien and Cappello, Franck and Raghavan, Padma and Robert, Yves and Sun, Hongyang},
-  year = {2017},
-  booktitle = {Proceedings of the 7th Workshop on Fault Tolerance for HPC at eXtreme Scale (FTXS)},
-  keywords = {mine,Workshop}
+        <pre><code>@article{HanEtAl2018b,
+  author = {Han, Li and Canon, Louis-Claude and Casanova, Henri and Robert, Yves and Vivien, Frédéric},
+  journal = {IEEE Trans. Computers},
+  volume = {67},
+  pages = {1105-1120},
+  title = {Checkpointing workflows for fail-stop errors},
+  number = {8},
+  year = {2018}
 }
 </code></pre>
       </div>
@@ -402,32 +798,32 @@ This causes several new challenges that we hope to address in the future.</p>
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
-          benoitEtAl2017optimal
+          HanEtAl2018
         </div>
       </div>
       <div class="row">
-        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsebenoitEtAl2017optimalBibtex" aria-expanded="false" aria-controls="collapsebenoitEtAl2017optimalBibtex">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHanEtAl2018Bibtex" aria-expanded="false" aria-controls="collapseHanEtAl2018Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsebenoitEtAl2017optimalAbstract" aria-expanded="false" aria-controls="collapsebenoitEtAl2017optimalAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseHanEtAl2018Abstract" aria-expanded="false" aria-controls="collapseHanEtAl2018Abstract">
           Abstract
         </button>
       </div>
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="benoitEtAl2017optimal">Benoit, Anne, Aurélien Cavelan, Valentin Le Fèvre, and Yves Robert. 2017. “Optimal Checkpointing Period with Replicated Execution on Heterogeneous Platforms.” In <i>Proceedings of the 7th Workshop on Fault Tolerance for HPC at EXtreme Scale (FTXS)</i>.</span>
+      <span id="HanEtAl2018">Han, Li, Valentin Le Fèvre, Louis-Claude Canon, Yves Robert, and Frédéric Vivien. 2018. “A Generic Approach to  Scheduling and Checkpointing Workflows.” In <i>ICPP2018, The 47th Int. Conf. on Parallel Processing</i>. IEEE Computer Society Press.</span>
     </div>
   </div>
-  <div class="collapse" id="collapsebenoitEtAl2017optimalBibtex">
+  <div class="collapse" id="collapseHanEtAl2018Bibtex">
     <div class="row bibtex-ref-raw">
       <div class="col-sm-10 offset-sm-1">
-        <pre><code>@inproceedings{benoitEtAl2017optimal,
-  title = {Optimal checkpointing period with replicated execution on heterogeneous platforms},
-  author = {Benoit, Anne and Cavelan, Aur{\'e}lien and Le F{\`e}vre, Valentin and Robert, Yves},
-  booktitle = {Proceedings of the 7th Workshop on Fault Tolerance for HPC at eXtreme Scale (FTXS)},
-  year = {2017},
-  keywords = {mine,Workshop}
+        <pre><code>@inproceedings{HanEtAl2018,
+  author = {Han, Li and Fèvre, Valentin Le and Canon, Louis-Claude and Robert, Yves and Vivien, Frédéric},
+  booktitle = {ICPP2018, the 47th Int. Conf. on Parallel Processing},
+  title = {A Generic Approach to  Scheduling and Checkpointing Workflows},
+  publisher = {{IEEE} Computer Society Press},
+  year = {2018}
 }
 </code></pre>
       </div>

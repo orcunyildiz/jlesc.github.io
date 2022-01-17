@@ -58,8 +58,8 @@
   <div class="dropdown-menu">
     <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
     <a href="/projects/" class="dropdown-item active">Projects</a>
-    <a href="/software/" class="dropdown-item">Software</a>
-    <a href="/research/visits/" class="dropdown-item">Visits</a>
+    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
+    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
   </div>
 </li>
 
@@ -134,7 +134,7 @@
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Matthieu</span> <span class="person sur-name">Dreher</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Orcun</span> <span class="person sur-name">Yildiz</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
             </span>
           
             <span class="clearfix">
@@ -151,6 +151,22 @@
           
             <span class="clearfix">
               <span class="person given-name">Bruno</span> <span class="person sur-name">Raffin</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Bogdan</span> <span class="person sur-name">Nicolae</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Michela</span> <span class="person sur-name">Taufer</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Jian</span> <span class="person sur-name">Huang</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Tanner</span> <span class="person sur-name">Hobson</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
             </span>
           
         </div>
@@ -187,6 +203,12 @@
 <li class="toc-entry toc-h3"><a href="#data-contracts-for-in-situ-workflows">Data contracts for in situ workflows</a></li>
 <li class="toc-entry toc-h3"><a href="#data-contracts-for-storage-systems">Data contracts for storage systems</a></li>
 <li class="toc-entry toc-h3"><a href="#workflows-and-operating-systems">Workflows and operating systems</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
+<li class="toc-entry toc-h3"><a href="#pycompss-decaf-distributedin-situ-workflow-convergence-2">PyCompss, Decaf distributed/in situ workflow convergence</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
+<li class="toc-entry toc-h3"><a href="#pycompss-decaf-distributedin-situ-workflow-convergence-3">PyCompss, Decaf distributed/in situ workflow convergence</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
+<li class="toc-entry toc-h3"><a href="#shared-memory-communication-for-containerized-workflows">Shared-memory communication for containerized workflows</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -379,7 +401,7 @@ uses of the data. They enable the storage system to work with much more
 knowledge about the input and output expected from an application and how it
 should be exposed to the user.  This knowledge enables CoSS to optimize data
 formatting and placement to best fit user’s requirements, storage space, and
-performance. Matthieu Dorier presented a concept paper at the SC17 PDSW workshop 
+performance. Matthieu Dorier presented a concept paper at the SC17 PDSW workshop
 <a href="#dorierpdsw17">(Dorier et al. 2017)</a> that introduces the idea of contract-based storage systems and presents some of
 the opportunities it offers, in order to motivate further research in this
 direction.</p>
@@ -403,6 +425,57 @@ software required for the evolution of in situ workflows toward exascale and how
 system software innovations can help address those challenges.  Matthieu Dreher
 presented a concept paper at the SC17 ISAV workshop <a href="#dreherisav17">(Dreher et al. 2017)</a> on these topics.</p>
 
+<h2 id="results-for-20182019">
+<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+
+<h3 id="pycompss-decaf-distributedin-situ-workflow-convergence-2">
+<a id="pycompss-decaf-distributedin-situ-workflow-convergence-2" class="anchor" href="#pycompss-decaf-distributedin-situ-workflow-convergence-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>PyCompss, Decaf distributed/in situ workflow convergence</h3>
+
+<ul>
+  <li>Rosa Badia and Jorge Ejarque of BSC, Orcun Yildiz and Tom Peterka of ANL</li>
+</ul>
+
+<p>Workflow systems promise scientists an automated end-to-end path from hypothesis to discovery. However, it is impractical to expect any single system to deliver such a wide range of capabilities. A more practical solution is to compose the end-to-end workflow from more than one system. With this goal in mind, the integration between distributed and in situ workflows is explored, where the result is a hierarchical heterogeneous workflow composed of subworkflows, with different levels of the hierarchy using different programming, execution, and data models.</p>
+
+<p>In 2018, we finalized the implementation of this hierarchical workflow composition that uses PyCOMPSs and Decaf as the distributed and in situ workflow tools, respectively. We evaluated our approach by performing experiments in materials science. The in situ Decaf sub-workflow consists of the LAMMPS molecular dynamics simulation coupled to a parallel in situ feature detector that selects nucleated molecule clusters during crystallization. Meanwhile, the PyCOMPSs distributed area workflow launches an ensemble of in situ Decaf workflows with different initial conditions, saves results from experiments that successfully nucleated, and collects frames from those ensemble members into an animation. Our results reveal that heterogeneous workflow integration is advantageous to both distributed area and in situ workflow systems. This work is currently being reviewed for a journal publication.</p>
+
+<h2 id="results-for-20192020">
+<a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
+
+<h3 id="pycompss-decaf-distributedin-situ-workflow-convergence-3">
+<a id="pycompss-decaf-distributedin-situ-workflow-convergence-3" class="anchor" href="#pycompss-decaf-distributedin-situ-workflow-convergence-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>PyCompss, Decaf distributed/in situ workflow convergence</h3>
+
+<ul>
+  <li>Rosa Badia and Jorge Ejarque of BSC, Orcun Yildiz and Tom Peterka of ANL</li>
+</ul>
+
+<p>Workflow systems promise scientists an automated end-to-end path from hypothesis to discovery. However, it is
+impractical to expect any single system to deliver such a wide range of capabilities. A more practical solution is to
+compose the end-to-end workflow from more than one system. With this goal in mind, the integration between distributed
+and in situ workflows is explored, where the result is a hierarchical heterogeneous workflow composed of subworkflows,
+with different levels of the hierarchy using different programming, execution, and data models.</p>
+
+<p>In 2019, we completed the implementation of this hierarchical workflow composition that uses PyCOMPSs and Decaf as the
+distributed and in situ workflow tools and published the results in the Journal Computing in Science
+and Engineering special issue on scientific workflows <a href="#Yildiz2019">(Yildiz et al. 2019)</a>.</p>
+
+<p>We are continuing to apply a similar hierarchical composition to particle accelerator high-energy physics applications
+in 2020.</p>
+
+<h2 id="results-for-20202021">
+<a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
+
+<h3 id="shared-memory-communication-for-containerized-workflows">
+<a id="shared-memory-communication-for-containerized-workflows" class="anchor" href="#shared-memory-communication-for-containerized-workflows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shared-memory communication for containerized workflows</h3>
+
+<ul>
+  <li>Tanner Hobson and Jian Huang of UTK, Orcun Yildiz, Bogdan Nicolae and Tom Peterka of ANL</li>
+</ul>
+
+<p>Scientific computation increasingly consists of a workflow of interrelated tasks. Containerization can make workflow systems more manageable, reproducible, and portable, but containers can impede communication due to their focus on encapsulation. In some circumstances, shared-memory regions are an effective way to improve performance of workflows; however sharing memory between containerized workflow tasks is difficult. In this work, we have created a software library called Dhmem that manages shared memory between workflow tasks in separate containers, with minimal code change and performance overhead. Instead of all code being in the same container, Dhmem allows a separate container for each workflow task to be constructed completely independently. Dhmem enables additional functionality: easy integration in existing workflow systems, communication configuration at runtime based on the environment, and scalable performance.</p>
+
+<p>In 2020, we started a new collaboration between ANL and UTK, and hosted Tanner Hobson as a summer student, where he developed the Dhmem software that enables shared-memory communication for containerized workflows. We published our results in IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid21) <a href="#Hobson2020Dhmem">(Hobson et al. 2021)</a>.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -420,6 +493,101 @@ beginning in February 2018</li>
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Hobson2020Dhmem
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHobson2020DhmemBibtex" aria-expanded="false" aria-controls="collapseHobson2020DhmemBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseHobson2020DhmemAbstract" aria-expanded="false" aria-controls="collapseHobson2020DhmemAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Hobson2020Dhmem">Hobson, Tanner, Orcun Yildiz, Bogdan Nicolae, Jian Huang, and Tom Peterka. 2021. “Shared-Memory Communication for Containerized Workflows.” In <i>Proceedings of the 21st IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (CCGrid)</i>. CCGrid ’21. IEEE/ACM.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHobson2020DhmemBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Hobson2020Dhmem,
+  author = {Hobson, Tanner and Yildiz, Orcun and Nicolae, Bogdan and Huang, Jian and Peterka, Tom},
+  title = {Shared-Memory Communication for Containerized Workflows},
+  booktitle = {Proceedings of the 21st IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (CCGrid)},
+  series = {CCGrid '21},
+  year = {2021},
+  location = {Melbourne, Australia},
+  pages = {},
+  numpages = {},
+  url = {},
+  doi = {},
+  acmid = {},
+  publisher = {IEEE/ACM},
+  keywords = {shared memory, workflow systems, containers},
+  pdf = {}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Yildiz2019
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseYildiz2019Bibtex" aria-expanded="false" aria-controls="collapseYildiz2019Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseYildiz2019Abstract" aria-expanded="false" aria-controls="collapseYildiz2019Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Yildiz2019">Yildiz, O., J. Ejarque, H. Chan, S. Sankaranarayanan, R. M. Badia, and T. Peterka. 2019. “Heterogeneous Hierarchical Workflow Composition.” <i>Computing in Science Engineering</i> 21 (4): 76–86. doi:10.1109/MCSE.2019.2918766.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseYildiz2019Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Yildiz2019,
+  author = {{Yildiz}, O. and {Ejarque}, J. and {Chan}, H. and {Sankaranarayanan}, S. and {Badia}, R. M. and {Peterka}, T.},
+  journal = {Computing in Science Engineering},
+  title = {Heterogeneous Hierarchical Workflow Composition},
+  year = {2019},
+  volume = {21},
+  number = {4},
+  pages = {76-86},
+  keywords = {natural sciences computing;workflow management software;hierarchical heterogeneous workflow;heterogeneous hierarchical workflow composition;workflow systems;automated end-to-end path;single workflow system;end-to-end workflow;in situ workflows;subworkflows;data models;materials science use cases;Task analysis;Computational modeling;Workflow management software;Data models;Data visualization;Analytical models;Heterogeneous networks},
+  doi = {10.1109/MCSE.2019.2918766},
+  issn = {1558-366X},
+  month = jul
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
